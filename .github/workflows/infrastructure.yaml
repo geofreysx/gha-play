@@ -15,8 +15,8 @@ jobs:
     steps:
       - name: test pip install
         run: |
-          pip install s3
-          s3 --help
+          pip install awscli
+          aws help
 
 #
 #  backup-task-definitions:
