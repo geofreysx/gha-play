@@ -20,7 +20,9 @@ jobs:
           AWS_REGION: us-east-2
         run: |
           pip install awscli
-          echo "$AWS_ACCESS_KEY_ID"
+          mkdir tasks
+          echo '{ "name": "task name" }' > tasks/frontend-task-definition.json
+          aws s3 sync tasks s3://dev-buildup-be-private/tasks
 
 
 
