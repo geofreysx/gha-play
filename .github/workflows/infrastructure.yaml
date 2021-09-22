@@ -22,6 +22,7 @@ jobs:
           pip install awscli
           mkdir tasks
           echo '{ "name": "task name" }' > tasks/frontend-task-definition.json
+          echo '{ "name": "core task name" }' > tasks/core-task-definition.json
           aws s3 sync tasks s3://dev-buildup-be-private/tasks
 
 
